@@ -82,10 +82,88 @@ nav button{font-size:20px;background:var(--fg);color:var(--bg);border:0;border-r
 .cv ul{list-style:none;padding:0;margin:10px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:6px}.cv li{background:var(--bg);border-radius:10px;padding:6px}
 .uq .op{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:10px 0}.uq .op button{background:var(--card);color:var(--fg);border:3px solid var(--t);border-radius:12px;padding:10px;font-weight:800}.uq .op button.ok{background:var(--s);color:#fff;border-color:var(--s)}.uq .op button.ko{opacity:.35}
 .uq .big{font-size:56px;animation:bob 2s infinite}
+.tz{background:color-mix(in srgb,var(--k) 18%,transparent);border-left:8px solid var(--k);border-radius:12px;padding:10px 14px;max-width:760px;margin:0 auto 14px;font-size:clamp(14px,1.9vw,18px)}
+.sp .hd{display:flex;align-items:center;gap:10px;max-width:560px;margin:0 auto 8px;font-size:34px}.hb{flex:1;height:16px;background:var(--line);border-radius:10px;overflow:hidden}#hf{height:100%;background:var(--s);transition:width .7s}
+.sp .card{width:min(620px,96%)}.sp .card img{height:120px}.card small{color:var(--m)}
+.sp .op{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0}.sp .op button{background:var(--card);color:var(--fg);border:3px solid var(--t);border-radius:12px;padding:12px;font-weight:700;font-size:clamp(14px,1.9vw,17px)}.sp .op button.ok{background:var(--s);color:#fff;border-color:var(--s)}.sp .op button.ko{opacity:.35}
+.bub{background:var(--bg);border:2px solid var(--line);border-radius:18px;padding:12px 14px;text-align:left;margin:10px 0;font-size:clamp(15px,2vw,19px);line-height:1.4}
+.sp .rs{list-style:none;padding:0;text-align:left}.sp .rs li{background:var(--bg);border-radius:12px;padding:8px 12px;margin:6px 0;border-left:8px solid var(--s)}.sp .rs li.n{border-color:var(--k)}
+@media (max-width:560px){.sp .op{grid-template-columns:1fr}}
+.chat .bub{opacity:0;animation:pop .5s both}.chat .m1{animation-delay:.3s}.chat .m2{animation-delay:1.3s}.chat .m3{animation-delay:2.4s}.chat .m4{animation-delay:3.6s}.chat .m5{opacity:0;animation:pop .5s 4.6s both}
+
+/* Situation de départ : observation et premières hypothèses */
+.starter{max-width:1100px;margin:auto;--intro-accent:#216cba}
+.starter button{touch-action:manipulation}
+.starter button:focus-visible,.starter summary:focus-visible{outline:3px solid var(--k);outline-offset:5px}
+.starter-head{display:flex;align-items:center;justify-content:space-between;gap:18px;margin:6px 0 20px}
+.starter-eyebrow{display:block;color:var(--e);font-size:13px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px}
+.starter h1{text-align:left;font-size:clamp(28px,3.4vw,42px);line-height:1.15}
+.starter-steps{display:flex;gap:6px;flex:none}
+.starter-steps span{display:flex;align-items:center;gap:7px;color:var(--m);font-size:13px;font-weight:700;padding:8px 11px;border:1px solid var(--line);border-radius:99px;background:var(--card)}
+.starter-steps b{display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--bg);font-size:12px}
+.starter-steps .active{background:var(--e);border-color:var(--e);color:#fff}
+.starter-steps .active b{background:#ffffff29;color:#fff}
+.starter-context{display:grid;grid-template-columns:1.06fr .94fr;gap:24px;align-items:stretch}
+.starter-story{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:25px 28px}
+.starter-label{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--m);margin:0 0 12px}
+.starter-story p{font-size:20px;line-height:1.55;margin:0 0 12px}
+.starter-story p:last-of-type{margin-bottom:0}
+.starter-goals{margin:20px 0 0;padding:0;list-style:none;display:grid;gap:10px}
+.starter-goals li{display:flex;align-items:center;gap:12px;font-size:18px;line-height:1.4}
+.starter-goals b{display:grid;place-items:center;flex:none;background:color-mix(in srgb,var(--e) 12%,var(--card));color:var(--e);width:30px;height:30px;border-radius:10px;font-size:15px}
+.starter-scene{position:relative;background:color-mix(in srgb,var(--k) 9%,var(--card));border:1px solid color-mix(in srgb,var(--k) 35%,var(--line));border-radius:24px;padding:20px;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden}
+.starter-sara{display:flex;align-items:center;gap:12px;align-self:stretch;margin-bottom:15px}
+.starter-avatar{font-size:38px;flex:none;width:59px;height:59px;border-radius:50%;display:grid;place-items:center;background:var(--card);border:1px solid var(--line)}
+.starter-bubble{background:var(--card);border:1px solid var(--line);border-radius:18px 18px 18px 3px;padding:12px 16px;font-size:19px;line-height:1.35;box-shadow:0 5px 18px #00000005}
+.starter-bubble small{display:block;color:var(--m);font-size:12px;font-weight:800;margin-bottom:3px}
+.starter-monitor{margin:0;background:#fff;border-radius:18px;padding:10px 25px;width:min(100%,330px);box-shadow:0 10px 28px #00000008;text-align:center}
+.starter-monitor img{display:block;height:230px;max-width:100%;object-fit:contain;margin:auto}
+.starter-monitor figcaption{color:#34455a;font-size:14px;font-weight:600;margin:4px 0 3px}
+.starter-task{display:flex;align-items:center;gap:22px;margin:20px 0 0;padding:19px 22px;border-left:5px solid var(--e);border-radius:18px;background:var(--card);border-top:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.starter-task-copy{flex:1}
+.starter-task .starter-label{color:var(--e);margin:0 0 4px}
+.starter-task p{margin:0;font-size:19px;line-height:1.45}
+.starter-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:1px solid var(--e);background:var(--e);color:#fff;border-radius:13px;padding:12px 18px;font-size:16px;font-weight:750;min-height:46px;line-height:1.35}
+.starter-btn:hover{filter:brightness(1.08)}
+.starter-btn svg{width:18px;height:18px;flex:none}
+.starter-btn.secondary{background:var(--card);color:var(--fg);border-color:var(--line)}
+.starter-intro{font-size:20px;line-height:1.5;color:var(--fg);margin:0 0 18px;max-width:850px}
+.starter-materials{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:13px}
+.starter-device{position:relative;display:flex;flex-direction:column;align-items:stretch;border:2px solid var(--line);border-radius:22px;padding:12px;background:var(--card);color:var(--fg);min-width:0;transition:border-color .18s,transform .18s,background .18s}
+.starter-device:hover{transform:translateY(-3px);border-color:var(--e)}
+.starter-device.selected{border-color:var(--e);background:color-mix(in srgb,var(--e) 7%,var(--card))}
+.starter-device-image{background:#fff;border-radius:13px;display:flex;align-items:center;justify-content:center;height:168px;margin:0 0 14px;padding:10px}
+.starter-device img{width:100%;height:100%;object-fit:contain}
+.starter-device-name{display:flex;align-items:center;justify-content:center;text-align:center;font-size:18px;font-weight:700;line-height:1.35;min-height:48px}
+.starter-tick{position:absolute;top:10px;right:10px;border:1px solid var(--line);border-radius:50%;width:28px;height:28px;display:grid;place-items:center;color:var(--m);background:var(--card);font-size:19px;font-weight:600}
+.starter-device.selected .starter-tick{border-color:var(--e);background:var(--e);color:#fff}
+.starter-choice-bar{display:flex;align-items:center;justify-content:space-between;gap:14px;border:1px solid var(--line);border-radius:15px;padding:14px 18px;margin:16px 0 0;background:var(--card);font-size:15px;line-height:1.5}
+.starter-choice-bar span:last-child{color:var(--m)}
+.starter-actions{display:flex;align-items:center;justify-content:space-between;gap:14px;margin:22px 0 6px}
+.starter-actions p{color:var(--m);font-size:14px;margin:0;line-height:1.5}
+.starter-picks{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin:0 0 18px;font-size:14px;color:var(--m)}
+.starter-picks strong{margin-right:5px}
+.starter-chip{font-size:14px;font-weight:650;color:var(--e);background:color-mix(in srgb,var(--e) 8%,var(--card));border:1px solid color-mix(in srgb,var(--e) 25%,var(--line));border-radius:99px;padding:6px 11px}
+.starter-questions{display:grid;grid-template-columns:1fr 1fr;gap:14px;list-style:none;margin:0;padding:0}
+.starter-questions li{display:flex;align-items:flex-start;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:19px;padding:19px 20px;font-size:20px;line-height:1.5}
+.starter-questions b{display:grid;place-items:center;flex:none;width:31px;height:31px;border-radius:10px;background:color-mix(in srgb,var(--e) 11%,var(--card));color:var(--e);font-size:15px}
+.starter-discuss{font-size:16px;line-height:1.5;margin:17px 0 0;color:var(--m)}
+.starter-teacher{border-top:1px solid var(--line);margin:18px 0 0;padding:13px 0 0;color:var(--m);font-size:14px;line-height:1.5}
+.starter-teacher summary{cursor:pointer;font-weight:650;width:fit-content}
+.starter-teacher p{margin:8px 0 0;max-width:900px}
+.starter-panel{animation:pop .35s both}
+@media(max-width:950px){.starter-head{flex-direction:column;align-items:flex-start;gap:14px}.starter-context{gap:16px;grid-template-columns:1fr 1fr}.starter-story{padding:20px}.starter-materials{gap:9px}.starter-device{padding:8px}.starter-device-image{height:135px;padding:7px}.starter-device-name{font-size:16px}.starter-monitor img{height:205px}.starter-bubble{font-size:17px}}
+@media(max-width:700px){.starter-head{margin-bottom:18px}.starter-steps{width:100%;justify-content:space-between;gap:5px}.starter-steps span{flex:1;justify-content:center;padding:7px 8px;font-size:12px}.starter-steps b{width:20px;height:20px}.starter-context{grid-template-columns:1fr}.starter-story{padding:19px 20px}.starter-story p{font-size:19px}.starter-scene{padding:17px}.starter-monitor{width:230px;padding:8px 15px}.starter-monitor img{height:160px}.starter-sara{margin-bottom:12px;justify-content:center}.starter-avatar{width:48px;height:48px;font-size:30px}.starter-task{flex-direction:column;align-items:stretch;gap:14px;padding:18px}.starter-task p{font-size:18px}.starter-materials{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.starter-device-image{height:128px;margin-bottom:8px}.starter-device-name{font-size:17px;min-height:40px}.starter-choice-bar{align-items:flex-start;flex-direction:column;gap:3px;padding:13px 15px}.starter-intro{font-size:19px}.starter-questions{grid-template-columns:1fr;gap:11px}.starter-questions li{font-size:19px;padding:16px}.starter-actions{flex-wrap:wrap}.starter-actions .starter-btn{flex:1}.starter-actions p{order:3;flex-basis:100%;text-align:center}.starter-tick{top:8px;right:8px}.starter h1{font-size:31px}}
+@media(prefers-reduced-motion:reduce){.starter-panel{animation:none!important}.starter-device{transition:none!important}}
+
 </style></head><body>
 <div id="top"><i id="tf"></i><span id="tl"></span></div>
 
-<section class="s on"><div class="w">
+<section class="s on" aria-label="Situation-problème : Un écran suffit-il ?"><div class="w starter">
+<div id="spb"></div></div></section>
+
+
+<section class="s"><div class="w">
 <h1>① Classer : entrée, sortie, stockage</h1>
 <div class="sub">Regarde le sens des flèches : où vont les informations ?</div>
 <div id="rows"></div>
@@ -128,7 +206,7 @@ requestAnimationFrame(function(){requestAnimationFrame(function(){c.style.left=b
 function boom(){for(var i=0;i<24;i++){var c=document.createElement('span');c.className='cf';c.textContent=['🎉','⭐','🔧','💡'][i%4];c.style.left=Math.random()*100+'vw';c.style.animationDelay=Math.random()*.6+'s';document.body.appendChild(c);setTimeout(function(x){x.remove()}.bind(null,c),3500)}}
 /* 1 */
 var RW=[['ENTRÉE','E','in','Il ENVOIE des informations à l’ordinateur.',['Clavier','Souris','Microphone']],['SORTIE','S','out','Il REÇOIT le résultat de l’ordinateur.',['Moniteur (écran)','Haut-parleurs','Imprimante']],['ENTRÉE / SORTIE','T','both','Il ENVOIE et il REÇOIT.',['Écran tactile','Casque','Routeur']],['STOCKAGE','K','both','Il GARDE les fichiers.',['Disque dur','Clé USB','Carte SD']]];
-$('rows').innerHTML=RW.map(function(r,k){return'<div class="row '+r[1]+' '+r[2]+'" style="--d:'+k+'"><div><h2>'+r[0]+'</h2><p>'+r[3]+'</p></div><div class="mid"><div class="ph">'+r[4].map(function(n){return'<figure><img src="'+IM['c:'+n]+'" alt="">'+n+'</figure>'}).join('')+'</div><div class="tr"></div></div><div class="ucw"><img class="uc" src="'+IM.uc+'" alt="">Ordinateur</div></div>'}).join('');
+$('rows').innerHTML=RW.map(function(r,k){return'<div class="row '+r[1]+' '+r[2]+'" style="--d:'+k+'"><div><h2>'+r[0]+'</h2><p>'+r[3]+'</p></div><div class="mid"><div class="ph">'+r[4].map(function(n){return'<figure><img src="'+IM['c:'+n]+'" alt="">'+n+'</figure>'}).join('')+'</div><div class="tr"></div></div><div class="ucw"><img class="uc" src="'+IM.uc+'" alt="Unité centrale">Unité centrale</div></div>'}).join('');
 /* 2 */
 var Q=[['Clavier','E'],['Souris','E'],['Manette de jeu','E'],['Scanner','E'],['Microphone','E'],['Webcam','E'],['Moniteur (écran)','S'],['Haut-parleurs','S'],['Vidéo-projecteur','S'],['Imprimante','S'],['Écran tactile','T'],['Routeur','T'],['Casque','T'],['Clé USB','K'],['Disque dur','K'],['Carte SD','K'],['DVD','K']];
 var N={E:'ENTRÉE',S:'SORTIE',T:'ENTRÉE / SORTIE',K:'STOCKAGE'},R={E:'Il ENVOIE une information à l’ordinateur.',S:'Il REÇOIT un résultat de l’ordinateur.',T:'Il fait les DEUX : il envoie et il reçoit.',K:'Il GARDE des fichiers.'};
@@ -186,9 +264,74 @@ $('uq').innerHTML='<small>Question '+(ui+1)+' / '+uqs.length+' · ça se mesure 
 [].forEach.call($('uq').querySelectorAll('.op button'),function(b){b.onclick=function(){var ok=+b.dataset.j===q[2];if(ok)us++;[].forEach.call($('uq').querySelectorAll('.op button'),function(x){x.disabled=true;x.classList.add(+x.dataset.j===q[2]?'ok':'ko')});
 $('ufb').innerHTML=(ok?'✅ <b>Correct !</b> ':'❌ <b>C’était '+U[q[2]][0]+'.</b> ')+U[q[2]][1]+'<br><button class="btn" id="un" style="margin-top:8px">Suite ▶</button>';$('un').onclick=function(){ui++;uask()}}})}
 ustart();
-(function(){var s=[].slice.call(document.querySelectorAll('.s')),i=0,dt=$('dt'),L=['① Classer · comprendre','① Classer · s’entraîner','② Les pièces','③ Mission','④ Les unités'];
+
+/* Situation de départ, adaptée aux débutants : aucune réponse imposée. */
+var starterState={step:0,chosen:[]};
+var starterDevices=[
+ ['c:Clavier','Un clavier','Clavier'],
+ ['c:Souris','Une souris','Souris'],
+ ['uc','Une unité centrale','Unité centrale'],
+ ['c:Imprimante','Une imprimante','Imprimante'],
+ ['c:Clé USB','Une clé USB','Clé USB']
+];
+var starterArrow='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+function starterHead(title){
+ return '<div class="starter-head"><div><span class="starter-eyebrow">Situation de départ</span><h1>'+title+'</h1></div><div class="starter-steps" aria-label="Étapes de la situation">'+['Observer','Choisir','Échanger'].map(function(t,k){return '<span'+(k===starterState.step?' class="active" aria-current="step"':'')+'><b>'+(k+1)+'</b>'+t+'</span>'}).join('')+'</div></div>';
+}
+function starterButton(action,text,secondary){return '<button type="button" class="starter-btn'+(secondary?' secondary':'')+'" data-intro-action="'+action+'">'+text+(secondary?'':starterArrow)+'</button>'}
+function renderStarter(){
+ var body='';
+ if(starterState.step===0){
+  body=starterHead('Un écran suffit-il ?')+
+   '<div class="starter-context"><div class="starter-story"><span class="starter-label">Le contexte</span><p>La salle informatique vient d’être réorganisée. Sara doit préparer une place pour travailler.</p><p>Elle pose <strong>un écran</strong> sur la table. Mais elle ne sait pas quel matériel ajouter.</p><ul class="starter-goals"><li><b>1</b>Elle veut écrire son nom.</li><li><b>2</b>Elle veut voir ce qu’elle écrit.</li><li><b>3</b>Elle veut garder son travail pour demain.</li></ul></div>'+ 
+   '<div class="starter-scene"><div class="starter-sara"><span class="starter-avatar" aria-hidden="true">👩‍🎓</span><div class="starter-bubble"><small>SARA DIT :</small>« Mon ordinateur est prêt ! »</div></div><figure class="starter-monitor"><img src="'+IM['c:Moniteur (écran)']+'" alt="Un écran de bureau posé seul, sans unité centrale ni clavier"><figcaption>Sur la table : un écran.</figcaption></figure></div></div>'+ 
+   '<div class="starter-task"><div class="starter-task-copy"><span class="starter-label">Votre tâche</span><p>Aidez Sara à choisir le matériel nécessaire pour réaliser son travail.</p></div>'+starterButton('next','Observer le matériel')+'</div>';
+ }else if(starterState.step===1){
+  body=starterHead('Que proposer à Sara ?')+
+   '<p class="starter-intro">Plusieurs appareils sont disponibles. <strong>Observez les images</strong>, puis cliquez sur le matériel que vous proposeriez à Sara.</p>'+ 
+   '<div class="starter-materials">'+starterDevices.map(function(d,k){var chosen=starterState.chosen.indexOf(k)>-1;return '<button type="button" class="starter-device'+(chosen?' selected':'')+'" data-intro-action="choose" data-device="'+k+'" aria-pressed="'+chosen+'" aria-label="Proposer '+d[1].toLowerCase()+' à Sara"><span class="starter-tick" aria-hidden="true">'+(chosen?'✓':'+')+'</span><span class="starter-device-image"><img src="'+IM[d[0]]+'" alt="'+d[2]+'"></span><span class="starter-device-name">'+d[1]+'</span></button>'}).join('')+'</div>'+ 
+   '<div class="starter-choice-bar"><strong id="starterChoiceCount" aria-live="polite">'+starterCountText()+'</strong><span>Ce sont vos premières idées. Vous pourrez changer d’avis.</span></div>'+ 
+   '<div class="starter-actions">'+starterButton('previous','Revoir la situation',true)+'<p>Travail en binôme · 5 minutes pour observer et échanger</p>'+starterButton('next','Partager nos idées')+'</div>';
+ }else{
+  var picks=starterState.chosen.map(function(k){return '<span class="starter-chip">'+starterDevices[k][2]+'</span>'}).join('');
+  body=starterHead('Échangeons nos idées')+
+   '<p class="starter-intro"><strong>Discutez avec votre camarade.</strong> Répondez à l’oral ou sur votre cahier, avec vos propres mots.</p>'+ 
+   '<div class="starter-picks"><strong>Nos choix de départ :</strong>'+(picks||'<span>Nous réfléchissons encore au matériel à proposer.</span>')+'</div>'+ 
+   '<ol class="starter-questions">'+[
+    'L’écran seul permet-il à Sara de faire son travail ? <strong>Pourquoi ?</strong>',
+    'Que lui proposez-vous pour <strong>écrire son nom</strong> et utiliser l’ordinateur ?',
+    'Quel matériel pourrait <strong>garder son travail pour demain</strong> ?',
+    'À votre avis, <strong>à quoi sert l’unité centrale</strong> ?'
+   ].map(function(q,k){return '<li><b aria-hidden="true">'+(k+1)+'</b><span>'+q+'</span></li>'}).join('')+'</ol>'+ 
+   '<p class="starter-discuss">Gardez vos propositions : vous découvrirez les réponses pendant le cours.</p>'+ 
+   '<div class="starter-actions">'+starterButton('previous','Revoir le matériel',true)+starterButton('course','Découvrir le cours')+'</div>'+ 
+   '<details class="starter-teacher"><summary>Fonction pédagogique · pour l’enseignant</summary><p>Faire émerger les idées des élèves sur l’ordinateur et susciter leur curiosité sur les appareils, les pièces à l’intérieur de l’unité centrale et le stockage.</p></details>';
+ }
+ $('spb').innerHTML='<div class="starter-panel">'+body+'</div>';
+ var current=$('spb').closest('section');if(current)current.scrollTop=0;
+}
+function starterCountText(){var n=starterState.chosen.length;return n===0?'Aucun appareil retenu pour le moment':n+' appareil'+(n>1?'s':'')+' retenu'+(n>1?'s':'')}
+function starterMove(direction){starterState.step=Math.max(0,Math.min(2,starterState.step+direction));renderStarter()}
+$('spb').addEventListener('click',function(e){
+ var b=e.target.closest('button[data-intro-action]');if(!b||!this.contains(b))return;
+ var action=b.dataset.introAction;
+ if(action==='next'){starterMove(1);return}
+ if(action==='previous'){starterMove(-1);return}
+ if(action==='course'){goTo(1);return}
+ if(action==='choose'){
+  var k=+b.dataset.device,at=starterState.chosen.indexOf(k),chosen=at===-1;
+  if(chosen)starterState.chosen.push(k);else starterState.chosen.splice(at,1);
+  b.classList.toggle('selected',chosen);b.setAttribute('aria-pressed',chosen);
+  b.querySelector('.starter-tick').textContent=chosen?'✓':'+';
+  $('starterChoiceCount').textContent=starterCountText();
+ }
+});
+renderStarter();
+
+(function(){var s=[].slice.call(document.querySelectorAll('.s')),i=0,dt=$('dt'),L=['Situation de départ','① Classer · comprendre','① Classer · s’entraîner','② Les pièces','③ Mission','④ Les unités'];
 s.forEach(function(){dt.appendChild(document.createElement('span'))});
 function go(n){i=Math.max(0,Math.min(s.length-1,n));s.forEach(function(e,k){e.classList.toggle('on',k===i)});[].forEach.call(dt.children,function(d,k){d.classList.toggle('on',k===i)});$('tl').textContent=L[i]+' · '+(i+1)+'/'+s.length;$('tf').style.width=(i+1)/s.length*100+'%';s[i].scrollTop=0}
-$('pv').onclick=function(){go(i-1)};$('nx').onclick=function(){go(i+1)};
-document.addEventListener('keydown',function(e){if(e.key==='ArrowRight')go(i+1);else if(e.key==='ArrowLeft')go(i-1)});go(0)})();
+function advance(direction){if(i===0&&((direction>0&&starterState.step<2)||(direction<0&&starterState.step>0))){starterMove(direction);return}go(i+direction)}
+window.goTo=go;$('pv').onclick=function(){advance(-1)};$('nx').onclick=function(){advance(1)};
+document.addEventListener('keydown',function(e){if(/^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName)||e.target.isContentEditable)return;if(e.key==='ArrowRight'){e.preventDefault();advance(1)}else if(e.key==='ArrowLeft'){e.preventDefault();advance(-1)}});go(0)})();
 </script></body></html>
